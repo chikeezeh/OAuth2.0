@@ -215,7 +215,7 @@ def showRestaurants():
     restaurants = session.query(Restaurant).order_by(asc(Restaurant.name))
     if 'username' not in login_session:
         return render_template(
-            'publicrestaurant.html', restaurants=restaurants)
+            'publicrestaurants.html', restaurants=restaurants)
     else:
         return render_template('restaurants.html', restaurants=restaurants)
 
